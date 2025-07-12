@@ -1,21 +1,52 @@
 {
+  // Defines the schema to validate this config file
   "$schema": "https://ui.shadcn.com/schema.json",
+
+  // Specifies the design style to use (e.g., "new-york", "california", etc.)
   "style": "new-york",
+
+  // Whether to use React Server Components (RSC). false = traditional CSR/SSR
   "rsc": false,
+
+  // Indicates whether the project uses TypeScript with JSX (TSX)
   "tsx": true,
+
+  // Tailwind CSS-related configurations
   "tailwind": {
+    // Path to the Tailwind configuration file
     "config": "tailwind.config.js",
+
+    // Path to the main CSS file where Tailwind directives are included
     "css": "src/index.css",
+
+    // Base color palette for the UI components (e.g., slate, gray, stone)
     "baseColor": "slate",
+
+    // Whether to generate CSS variables for themes/colors
     "cssVariables": true,
+
+    // Prefix to avoid class name conflicts (empty = no prefix)
     "prefix": ""
   },
+
+  // Aliases for commonly used paths in the project
   "aliases": {
+    // Shortcut to the components directory
     "components": "@/components",
+
+    // Shortcut to utility functions
     "utils": "@/lib/utils",
+
+    // Shortcut to UI-specific components
     "ui": "@/components/ui",
+
+    // Shortcut to shared libraries or helpers
     "lib": "@/lib",
+
+    // Shortcut to custom React hooks
     "hooks": "@/hooks"
   },
+
+  // Icon set to use (e.g., lucide, heroicons). Lucide is a modern icon library.
   "iconLibrary": "lucide"
 }
