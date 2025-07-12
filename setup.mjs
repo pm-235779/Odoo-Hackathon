@@ -8,7 +8,7 @@
 import fs from "fs";
 import { config as loadEnvFile } from "dotenv";
 import { spawnSync } from "child_process";
-
+//loop 1 for exit
 if (!fs.existsSync(".env.local")) {
   // Something is off, skip the script.
   process.exit(0);
@@ -18,7 +18,7 @@ const config = {};
 loadEnvFile({ path: ".env.local", processEnv: config });
 
 const runOnceWorkflow = process.argv.includes("--once");
-
+// loop 2 for exit
 if (runOnceWorkflow && config.SETUP_SCRIPT_RAN !== undefined) {
   // The script has already ran once, skip.
   process.exit(0);
